@@ -16,5 +16,7 @@ export const calculateWeightedAveragePrice = (volume: number, bids: any[]) => {
     totalVolume += volumeContribution;
   }
 
-  return totalVolume > 0 ? weightedPriceSum / totalVolume : null;
+  return totalVolume > 0 ? parseFloat((weightedPriceSum / totalVolume).toFixed(2)) : null;
+
+
 };
