@@ -9,9 +9,13 @@ describe('calculateWeightedAveragePrice', () => {
       { p: 200, s: 15 },
     ];
 
+    console.log('Input volume:', volume);
+    console.log('Input bids:', bids);
+
     const averagePrice = calculateWeightedAveragePrice(volume, bids);
 
-    expect(averagePrice).toBeCloseTo(150, 1);
+    console.log('Calculated averagePrice:', averagePrice);
 
+    expect(averagePrice).toBeCloseTo(150, 1);
   });
 });
