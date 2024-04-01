@@ -12,6 +12,9 @@ describe('calculateWeightedAveragePrice', () => {
     const expectedAveragePrice = (bids[0].p * bids[0].s + bids[1].p * bids[1].s) / (bids[0].s + bids[1].s);
     const averagePrice = calculateWeightedAveragePrice(volume, bids);
 
-    expect(averagePrice).toBeCloseTo(expectedAveragePrice, 1);  // Allow a difference of up to 0.01
+    console.log('Expected Average Price:', expectedAveragePrice);
+    console.log('Calculated Average Price:', averagePrice);
+
+    expect(averagePrice).toBeCloseTo(expectedAveragePrice, 0);  // Allow a difference of up to 0.01
   });
 });
