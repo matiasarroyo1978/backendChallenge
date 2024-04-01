@@ -3,9 +3,9 @@ import { calculateWeightedAveragePrice } from '../utils/calculateWeightedAverage
 describe('calculateWeightedAveragePrice', () => {
   it('calculates the correct average price for various bid volume combinations', () => {
     // Test with various bid volume combinations
-    const volume = 25;
+    const volume = 50;
     const bids = [
-      { p: 100, s: 10 },
+      { p: 100, s: 15 },
       { p: 200, s: 15 },
     ];
 
@@ -15,6 +15,6 @@ describe('calculateWeightedAveragePrice', () => {
     console.log('Expected Average Price:', expectedAveragePrice);
     console.log('Calculated Average Price:', averagePrice);
 
-    expect(averagePrice).toBeCloseTo(expectedAveragePrice, 0);  // Allow a difference of up to 0.01
+    expect(averagePrice).toBe(expectedAveragePrice); 
   });
 });
