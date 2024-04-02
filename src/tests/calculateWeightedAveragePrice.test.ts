@@ -5,7 +5,7 @@ describe('calculateWeightedAveragePrice', () => {
     // Test with various bid volume combinations
     const volume = 50;
     const bids = [
-      { p: 100, s: 15 },
+      { p: 175, s: 15 },
       { p: 200, s: 15 },
     ];
 
