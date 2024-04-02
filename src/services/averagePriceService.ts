@@ -12,7 +12,7 @@ export const getAveragePrice = async (volume: number, symbols: string) => {
   // Si el par es ETH/USD, convertir el volumen de ETH a USD
   if (symbols === 'ETH/USD') {
     const ethPrice = Number(bids[0].p); // Asume que el primer bid tiene el precio más reciente
-    volume /= ethPrice;
+    volume = ethPrice / volume;
     console.log("ETH volume in Dollars: ",volume);
   }
 
